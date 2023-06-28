@@ -1,1 +1,128 @@
-// header.scss
+@use "./../utils" as *;
+@use "./../components" as *;
+@use "./../layout/navigation" as *;
+@use "./../base/themes" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+#header-wrapper {
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.07);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: $white;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 1050px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 유저 멤버 영역 */
+.member {
+  display: flex;
+  justify-content: flex-end;
+  order: -1;
+  margin-bottom: 21px;
+  margin-top: 12px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item a {
+    margin: 0 10px;
+    font-size: 12px;
+  }
+
+  &__item:nth-child(-n + 2)::after {
+    content: "";
+    height: 12px;
+    border-right: 1px solid $gray-200;
+  }
+
+  &__item:hover {
+    color: $primary;
+    font-weight: 600;
+  }
+
+  &__item:last-child::after {
+    content: "";
+    display: inline-block;
+    background: url(../../img/header/down_icon.png) no-repeat;
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* 로고, 검색창, 서브메뉴바 컨테이너 */
+.top-container {
+  @include flexbox-between;
+  margin-bottom: 12px;
+}
+
+/* 로고 영역 */
+.logo {
+  &-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &-box {
+    &__title {
+      display: flex;
+      align-items: center;
+    }
+
+    &__market,
+    &__beauty {
+      font-size: 21.33px;
+      margin: 0 12px;
+      font-weight: 600;
+    }
+
+    &__market {
+      color: $primary;
+    }
+
+    &__beauty {
+      color: $gray-400;
+    }
+
+    &__beauty:hover {
+      color: $primary;
+    }
+
+    &__beauty-wrapper {
+      position: relative;
+    }
+
+    &__beauty::after {
+      content: "";
+      background-image: url(../../img/header/Vector.png);
+      width: 7px;
+      height: 7px;
+      position: absolute;
+      top: 0;
+      right: 2px;
+    }
+
+    &__title::after {
+      content: "";
+      background-color: tomato;
+      height: 14px;
+      border-right: 1px solid $gray-200;
+    }
+  }
+}
+
+/* 서브메뉴 영역 */
+.sub-menu__item {
+  margin: 0 8px;
+}

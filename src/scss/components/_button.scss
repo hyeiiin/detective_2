@@ -1,1 +1,56 @@
-// button.scss
+@use "./../utils/mixin" as *;
+@use "./../utils/color" as *;
+
+// orderList CheckBox
+.item__check-box {
+  display: flex;
+  align-items: center;
+}
+
+#check-circle,
+#check-circle2 {
+  display: inline-block;
+  margin-right: 8px;
+  margin-left: 5px;
+  width: 25px;
+  height: 25px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+}
+
+#check-circle::before,
+#check-circle2::before {
+  content: "";
+  background: url(../../img/orderList/Check.png) no-repeat;
+  background-position: top -8px right -8px;
+  @include order-check-box;
+  opacity: 1;
+}
+
+#check-circle::after,
+#check-circle2::after {
+  content: "";
+  background: url(../../img/orderList/Check.png) no-repeat;
+  background-position: bottom -8px right -8px;
+  @include order-check-box;
+  opacity: 0;
+}
+
+/* 체크박스 토글방식 UI */
+#order-check:checked + #check-circle::after,
+#order-check2:checked + #check-circle2::after {
+  opacity: 1;
+}
+
+#order-check:checked + #check-circle::before,
+#order-check2:checked + #check-circle2::before {
+  opacity: 0;
+}
+
+#order-check,
+#order-check2 {
+  position: absolute;
+  left: -999em;
+  appearance: none;
+}
