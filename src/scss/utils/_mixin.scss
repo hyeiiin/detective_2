@@ -1,1 +1,41 @@
-// mixin.scss
+// flex 모음
+@mixin flexbox-center($direction: row, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $center;
+    align-items: $align;
+  }
+  
+  @mixin flexbox-between($direction: row, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: space-between;
+    align-items: $align;
+  }
+  
+  // button 모음
+  @mixin check-button {
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 1px solid var(--primary-color);
+    background: #c4c4c4;
+  }
+  
+  @mixin checked-button {
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 7px solid var(--primary-color);
+    background: #c4c4c4;
+  }
+  
+  @mixin product-img {
+    width: 249px;
+    display: block;
+  }
+  
+  @mixin margin-auto{
+    margin-left:auto;
+    margin-right:auto;
+  }  
