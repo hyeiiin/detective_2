@@ -1,41 +1,72 @@
 // flex 모음
 @mixin flexbox-center($direction: row, $align: center) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $center;
-    align-items: $align;
-  }
-  
-  @mixin flexbox-between($direction: row, $align: center) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: space-between;
-    align-items: $align;
-  }
-  
-  // button 모음
-  @mixin check-button {
-    appearance: none;
-    width: 24px;
-    height: 24px;
-    border: 1px solid var(--primary-color);
-    background: #c4c4c4;
-  }
-  
-  @mixin checked-button {
-    appearance: none;
-    width: 24px;
-    height: 24px;
-    border: 7px solid var(--primary-color);
-    background: #c4c4c4;
-  }
-  
-  @mixin product-img {
-    width: 249px;
-    display: block;
-  }
-  
-  @mixin margin-auto{
-    margin-left:auto;
-    margin-right:auto;
-  }  
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $center;
+  align-items: $align;
+}
+
+@mixin flexbox-between($direction: row, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: space-between;
+  align-items: $align;
+}
+
+@mixin flex($d: row, $j, $a) {
+  display: flex;
+  flex-direction: $d;
+  justify-content: $j;
+  align-items: $a;
+}
+
+// button 모음
+@mixin check-button {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 1px solid $primary;
+  background: #c4c4c4;
+}
+
+@mixin checked-button {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 7px solid $primary;
+  background: #c4c4c4;
+}
+
+@mixin product-img {
+  width: 249px;
+  display: block;
+}
+
+@mixin margin-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// category
+@mixin category-item($h) {
+  content: "";
+  background: url(../img/header/MenuIcon-sprite.png) no-repeat;
+  background-size: 32px;
+  background-position: -4px $h;
+  width: 25px;
+  height: 25px;
+  margin-right: 12px;
+}
+
+@mixin order-icon-size {
+  width: 35px;
+  height: 35px;
+}
+
+@mixin order-check-box {
+  width: 25px;
+  height: 25px;
+  right: -1.2px;
+  top: -0.5px;
+  position: absolute;
+}

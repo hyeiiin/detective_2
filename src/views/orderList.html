@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ko-KR">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style/index.css" />
-    <title>Main</title>
+    <link rel="stylesheet" href="../style/index.css" />
+    <title>장바구니 - 마켓칼리</title>
   </head>
   <body>
     <div id="header-wrapper">
@@ -62,7 +62,7 @@
               <img src="../img/header/Heart.png" alt=""
             /></a>
             <a
-              href="./views/orderList.html"
+              href="/"
               class="sub-menu__wish sub-menu__item"
               aria-label="장바구니 메뉴"
             >
@@ -174,211 +174,114 @@
       </header>
     </div>
 
-    <aside class="container">
-      <a href="/" class="">
-        <img
-          class="main-banner"
-          src="../img/main/banner05.png"
-          alt="칼리 메인 배너"
-        />
-      </a>
-      <img
-        class="arrow-left"
-        src="../img/main/Arrow_left.png"
-        alt="왼쪽 화살표"
-      />
-      <img
-        class="arrow-right"
-        src="../img/main/Arrow_right.png"
-        alt="오른쪽 화살표"
-      />
-    </aside>
+    <main class="order">
+      <h2 class="order-title">장바구니</h2>
+      <!-- 타이틀 -->
+      <div class="order-wrapper">
+        <!-- 주문상품 리스트 -->
+        <section class="basket">
+          <ul class="basket__list">
+            <li class="basket__item">
+              <!-- 전체상품 체크박스 -->
+              <label for="order-check" class="item__check-box">
+                <input type="checkbox" id="order-check" name="order-check" />
+                <span id="check-circle"></span>
+                <span>전체선택</span>
+              </label>
+              <span class="item__num">(3/3)</span>
+              <span>선택삭제</span>
+            </li>
+            <li class="basket__item">
+              <span>냉장 식품</span>
+              <button></button>
+            </li>
+            <li class="basket__item">
+              <span>냉동 식품</span>
+              <button></button>
+            </li>
+            <li class="basket__item">
+              <span>상온 식품</span>
+              <button></button>
+            </li>
+            <li class="basket__item">
+              <label for="order-check2" class="item__check-box">
+                <input type="checkbox" id="order-check2" name="order-check2" />
+                <span id="check-circle2"></span>
+                <span>전체선택</span>
+              </label>
+              <span class="item__num">(3/3)</span>
+              <span>선택삭제</span>
+            </li>
+          </ul>
+        </section>
 
-    <div id="main__wrapper">
-      <main class="main__container">
-        <div class="middle">
-          <h2 class="middle_title">이 상품 어때요?</h2>
-          <div class="all_slide">
-            <span class="slide">
-              <a href="#">
-                <img
-                  src="../img/main/slide1.jpg"
-                  alt="[풀무원 탱탱쫄면 (4개입)]"
-                />
-              </a>
+        <article class="cash">
+          <section class="adress__container">
+            <h3 class="adress__title">배송지</h3>
+            <p class="adress__info">
+              서울 중랑구 면목로 42길 11 (행운빌딩) 603호
+            </p>
+            <span class="adress__post">
+              <a href="#">샛별배송</a>
+            </span>
+            <button type="submit" class="adress__btn">배송지 변경</button>
+          </section>
 
-              <a href="#" class="price-link">
-                <span class="slide-text">
-                  <span class="slide_title">[풀무원 탱탱쫄면 (4개입)]</span>
-                  <span class="slide_price">4,980 원</span>
-                </span>
-              </a>
-            </span>
-            <span class="slide">
-              <a href="#">
-                <img
-                  src="../img/main/slide2.png"
-                  alt="[온더바디] 죠르디 시카 자석 선쿠션"
-                />
-              </a>
-              <a href="#" class="price-link">
-                <span class="slide-text">
-                  <span class="slide_title"
-                    >[온더바디] 죠르디 시카 자석 선쿠션</span
-                  >
-                  <span class="slide_price">32,500 원</span>
-                </span>
-              </a>
-            </span>
-            <span class="slide">
-              <a href="#">
-                <img
-                  src="../img/main/slide3.png"
-                  alt="유기농 밀키퀸 현미 4kg"
-                />
-              </a>
-              <a href="#" class="price-link">
-                <span class="slide-text">
-                  <span class="slide_title">유기농 밀키퀸 현미 4kg</span>
-                  <span class="slide_price">25,000 원</span>
-                </span>
-              </a>
-            </span>
-            <span class="slide">
-              <a href="#">
-                <img
-                  src="../img/main/slide4.png"
-                  alt="[프로쉬] 베이비 세탁세제"
-                />
-              </a>
-              <a href="#" class="price-link">
-                <span class="slide-text">
-                  <span class="slide_title">[프로쉬] 베이비 세탁세제</span>
-                  <span>
-                    <span class="slide_dis">24%</span>
-                    <span class="slide_price">18,900 원</span>
-                  </span>
-                  <span class="slide_linedis">24,900 원</span>
-                </span>
-              </a>
-            </span>
-            <img
-              class="group_image"
-              src="../img/main/Group.png"
-              alt="오른쪽으로 넘기기 화살표"
-            />
-          </div>
-        </div>
-        <div class="middle_banner">
-          <a href="#">
-            <img
-              src="../img/main/line-banner1.png"
-              alt="칼리 10월의 퍼플위크"
-            />
-          </a>
-        </div>
-        <div class="middle">
-          <div class="middle_title">놓치면 후회할 가격</div>
-          <div class="all_slide">
-            <span class="slide">
-              <a href="#">
-                <img
-                  src="../img/main/slide1.jpg"
-                  alt="[풀무원 탱탱쫄면 (4개입)]"
-                />
-              </a>
+          <section class="cash-amount__container">
+            <div class="cash-amount__wrapper">
+              <div class="cash-amount__item">
+                <span>상품금액</span>
+                <div class="cash-amount__item__amount">
+                  <span>40,680</span>
+                  <span>원</span>
+                </div>
+              </div>
+              <div class="cash-amount__item">
+                <span>상품할인금액</span>
+                <div class="cash-amount__item__amount">
+                  <span>-4,651</span>
+                  <span>원</span>
+                </div>
+              </div>
+              <div class="cash-amount__item">
+                <span>배송비</span>
+                <div class="cash-amount__item__amount">
+                  <span>+3,000</span>
+                  <span>원</span>
+                </div>
+              </div>
+            </div>
 
-              <a href="#" class="price-link">
-                <span class="slide-text">
-                  <span class="slide_title">[풀무원 탱탱쫄면 (4개입)]</span>
-                  <span class="slide_price">4,980 원</span>
-                </span>
-              </a>
-            </span>
-            <span class="slide">
-              <a href="#">
-                <img
-                  src="../img/main/slide2.png"
-                  alt="[온더바디] 죠르디 시카 자석 선쿠션"
-                />
-              </a>
-              <a href="#" class="price-link">
-                <span class="slide-text">
-                  <span class="slide_title"
-                    >[온더바디] 죠르디 시카 자석 선쿠션</span
-                  >
-                  <span class="slide_price">32,500 원</span>
-                </span>
-              </a>
-            </span>
-            <span class="slide">
-              <a href="#">
-                <img
-                  src="../img/main/slide3.png"
-                  alt="유기농 밀키퀸 현미 4kg"
-                />
-              </a>
-              <a href="#" class="price-link">
-                <span class="slide-text">
-                  <span class="slide_title">유기농 밀키퀸 현미 4kg</span>
-                  <span class="slide_price">25,000 원</span>
-                </span>
-              </a>
-            </span>
-            <span class="slide">
-              <a href="#">
-                <img
-                  src="../img/main/slide4.png"
-                  alt="[프로쉬] 베이비 세탁세제"
-                />
-              </a>
-              <a href="#" class="price-link">
-                <span class="slide-text">
-                  <span class="slide_title">[프로쉬] 베이비 세탁세제</span>
-                  <span>
-                    <span class="slide_dis">24%</span>
-                    <span class="slide_price">18,900 원</span>
-                  </span>
-                  <span class="slide_linedis">24,900 원</span>
-                </span>
-              </a>
-            </span>
-            <img
-              class="group_image"
-              src="../img/main/Group.png"
-              alt="오른쪽으로 넘기기 화살표"
-            />
-          </div>
-        </div>
-      </main>
-      <div class="recent">
-        <button>
-          <img src="../img/main/icon-arrow_up.svg" alt="위쪽 화살표" />
-        </button>
-
-        <span class="recent_text">최근 본 상품</span>
-
-        <ul class="recent_slide">
-          <li>
-            <a href="#"
-              ><img src="../img/main/visual.png" alt="최근 본 상품 1"
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img src="../img/main/visual2.png" alt="최근 본 상품 2"
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img src="../img/main/visual3.png" alt="최근 본 상품 3"
-            /></a>
-          </li>
-        </ul>
-        <button>
-          <img src="../img/main/icon-arrow_down.svg" alt="아래쪽 화살표" />
-        </button>
+            <section class="cash-pay__container">
+              <span>결제예정금액</span>
+              <div class="cash-pay__item__amount">
+                <span>39,029</span>
+                <span>원</span>
+              </div>
+            </section>
+          </section>
+          <button type="submit" id="order-btn">주문하기</button>
+          <ul class="guide__list">
+            <li class="guide__item">
+              쿠폰/적립금은 주문서에서 사용 가능합니다.
+            </li>
+            <li class="guide__item">
+              [주문완료] 상태일 경우에만 주문 취소 가능합니다.
+            </li>
+            <li class="guide__item">
+              [마이컬리>주문내역 상세페이지] 에서 직접 취소하실 수 있습니다.
+            </li>
+            <li class="guide__item">
+              쿠폰, 적립금 사용 금액을 제외한 실 결제 금액 기준으로
+              최종정산됩니다.
+            </li>
+            <li class="guide__item">
+              상품별로 적립금 지급 기준이 다를 수 있습니다.(상품 상세 페이지에서
+              확인 가능합니다)
+            </li>
+          </ul>
+        </article>
       </div>
-    </div>
+    </main>
   </body>
 </html>
