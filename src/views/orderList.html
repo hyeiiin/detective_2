@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/index.css" />
+    <title>장바구니 - 마켓칼리</title>
+  </head>
+  <body>
+    <div id="header-wrapper">
+      <header class="header">
+        <section class="top-container">
+          <div class="logo-box">
+            <div class="logo-wrapper">
+              <h1 class="logo-box__title">
+                <img src="../img/header/logo.png" alt="마켓칼리 로고" />
+                <!-- 접근성 태그 추가 필요 -->
+                <a href="/" class="logo-box__market">마켓칼리</a>
+              </h1>
+              <!-- 가상요소 | 추가 필요 / HTML 마크업, CSS 가상요소 뭐가 더 좋을지? -->
+              <h2 class="logo-box__beauty-wrapper">
+                <a href="/" class="logo-box__beauty">뷰티칼리</a>
+              </h2>
+            </div>
+          </div>
+
+          <form action="#" method="get" class="search-form">
+            <fieldset>
+              <legend class="a11y-hidden">검색폼</legend>
+              <div class="search-form__box">
+                <label for="search" class="a11y-hidden search-form__label"
+                  >검색어</label
+                >
+                <input
+                  type="search"
+                  id="search"
+                  name="search"
+                  required
+                  class="search-form__input"
+                  placeholder="검색어를 입력하세요."
+                />
+                <button type="submit" class="search-form__button">
+                  <img src="../img/header/group.png" alt="" />
+                </button>
+              </div>
+            </fieldset>
+          </form>
+
+          <section class="sub-menu">
+            <a
+              href="/"
+              class="sub-menu__map sub-menu__item"
+              aria-label="배송지 추가"
+            >
+              <img src="../img/header/Location.png" alt="" />
+            </a>
+            <a
+              href="/"
+              class="sub-menu__like sub-menu__item"
+              aria-label="찜 목록"
+            >
+              <img src="../img/header/Heart.png" alt=""
+            /></a>
+            <a
+              href="/"
+              class="sub-menu__wish sub-menu__item"
+              aria-label="장바구니 메뉴"
+            >
+              <img src="../img/header/Cart-1.png" alt=""
+            /></a>
+          </section>
+        </section>
+
+        <ul class="member">
+          <!-- 가상요소 | 추가 필요 -->
+          <li class="member__item"><a href="/">회원가입</a></li>
+          <li class="member__item"><a href="/">로그인</a></li>
+          <li class="member__item"><a href="/">고객센터</a></li>
+        </ul>
+
+        <div id="nav-wrapper">
+          <nav class="menu-container">
+            <div class="category">
+              <img
+                src="../img/header/hanburger_black.png"
+                alt="카테고리 펼치기"
+              />
+              <span class="category__text">카테고리</span>
+              <div class="category__wrapper">
+                <ul class="category__list">
+                  <li class="category__item">
+                    <span class="category__title">선물하기</span>
+                  </li>
+                  <li class="category__item">
+                    <span class="category__title">채소</span>
+                  </li>
+                  <li class="category__item">
+                    <span class="category__title">과일‧견과‧쌀</span>
+                  </li>
+                  <li class="category__item">
+                    <span class="category__title">수산‧해산‧건어물</span>
+                  </li>
+                  <li class="category__item">
+                    <span class="category__title">정육‧계란</span>
+                  </li>
+                  <li class="category__item">
+                    <span class="category__title">국‧반찬‧메인요리</span>
+                  </li>
+                  <li class="category__item">
+                    <span class="category__title">샐러드‧간편식</span>
+                  </li>
+                  <li class="category__item">
+                    <span class="category__title">면‧양념‧오일</span>
+                  </li>
+                  <li class="category__item">
+                    <span class="category__title">생수‧음료‧우유‧커피</span>
+                  </li>
+                  <li class="category__item">
+                    <span class="category__title">간식‧과자‧떡</span>
+                  </li>
+                  <li class="category__item">
+                    <span class="category__title">베이커리‧치즈‧델리</span>
+                  </li>
+                  <li class="category__item">
+                    <span class="category__title">건강식품</span>
+                  </li>
+                  <li class="category__item">
+                    <span class="category__title">와인</span>
+                  </li>
+                  <li class="category__item">
+                    <span class="category__title">전통주</span>
+                  </li>
+                  <li class="category__item">
+                    <span class="category__title">생활용품‧리빙‧캠핑</span>
+                  </li>
+                  <li class="category__item">
+                    <span class="category__title">스킨케어‧메이크업</span>
+                  </li>
+                  <li class="category__item">
+                    <span class="category__title">헤어‧바디‧구강</span>
+                  </li>
+                  <li class="category__item">
+                    <span class="category__title">주방용품</span>
+                  </li>
+                  <li class="category__item">
+                    <span class="category__title">가전제품</span>
+                  </li>
+                  <li class="category__item">
+                    <span class="category__title">반려동물</span>
+                  </li>
+                  <li class="category__item">
+                    <span class="category__title">베이비‧키즈‧완구</span>
+                  </li>
+                  <li class="category__item">
+                    <span class="category__title">여행‧티켓</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <ul class="menu">
+              <li class="menu__item"><a href="/">신상품</a></li>
+              <li class="menu__item"><a href="/">베스트</a></li>
+              <li class="menu__item"><a href="/">알뜰쇼핑</a></li>
+              <li class="menu__item"><a href="/">특가/혜택</a></li>
+            </ul>
+            <div class="menu__post">
+              <a href="#">
+                <span>샛별・택배</span>
+                <span>배송안내</span>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </header>
+    </div>
+
+    <main class="order">
+      <h2 class="order-title">장바구니</h2>
+      <!-- 타이틀 -->
+      <div class="order-wrapper">
+        <!-- 주문상품 리스트 -->
+        <section class="basket">
+          <ul class="basket__list">
+            <li class="basket__item">
+              <!-- 전체상품 체크박스 -->
+              <label for="order-check" class="item__check-box">
+                <input type="checkbox" id="order-check" name="order-check" />
+                <span id="check-circle"></span>
+                <span>전체선택</span>
+              </label>
+              <span class="item__num">(3/3)</span>
+              <span>선택삭제</span>
+            </li>
+            <li class="basket__item">
+              <span>냉장 식품</span>
+              <button></button>
+            </li>
+            <li class="basket__item">
+              <span>냉동 식품</span>
+              <button></button>
+            </li>
+            <li class="basket__item">
+              <span>상온 식품</span>
+              <button></button>
+            </li>
+            <li class="basket__item">
+              <label for="order-check2" class="item__check-box">
+                <input type="checkbox" id="order-check2" name="order-check2" />
+                <span id="check-circle2"></span>
+                <span>전체선택</span>
+              </label>
+              <span class="item__num">(3/3)</span>
+              <span>선택삭제</span>
+            </li>
+          </ul>
+        </section>
+
+        <article class="cash">
+          <section class="adress__container">
+            <h3 class="adress__title">배송지</h3>
+            <p class="adress__info">
+              서울 중랑구 면목로 42길 11 (행운빌딩) 603호
+            </p>
+            <span class="adress__post">
+              <a href="#">샛별배송</a>
+            </span>
+            <button type="submit" class="adress__btn">배송지 변경</button>
+          </section>
+
+          <section class="cash-amount__container">
+            <div class="cash-amount__wrapper">
+              <div class="cash-amount__item">
+                <span>상품금액</span>
+                <div class="cash-amount__item__amount">
+                  <span>40,680</span>
+                  <span>원</span>
+                </div>
+              </div>
+              <div class="cash-amount__item">
+                <span>상품할인금액</span>
+                <div class="cash-amount__item__amount">
+                  <span>-4,651</span>
+                  <span>원</span>
+                </div>
+              </div>
+              <div class="cash-amount__item">
+                <span>배송비</span>
+                <div class="cash-amount__item__amount">
+                  <span>+3,000</span>
+                  <span>원</span>
+                </div>
+              </div>
+            </div>
+
+            <section class="cash-pay__container">
+              <span>결제예정금액</span>
+              <div class="cash-pay__item__amount">
+                <span>39,029</span>
+                <span>원</span>
+              </div>
+            </section>
+          </section>
+          <button type="submit" id="order-btn">주문하기</button>
+          <ul class="guide__list">
+            <li class="guide__item">
+              쿠폰/적립금은 주문서에서 사용 가능합니다.
+            </li>
+            <li class="guide__item">
+              [주문완료] 상태일 경우에만 주문 취소 가능합니다.
+            </li>
+            <li class="guide__item">
+              [마이컬리>주문내역 상세페이지] 에서 직접 취소하실 수 있습니다.
+            </li>
+            <li class="guide__item">
+              쿠폰, 적립금 사용 금액을 제외한 실 결제 금액 기준으로
+              최종정산됩니다.
+            </li>
+            <li class="guide__item">
+              상품별로 적립금 지급 기준이 다를 수 있습니다.(상품 상세 페이지에서
+              확인 가능합니다)
+            </li>
+          </ul>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>

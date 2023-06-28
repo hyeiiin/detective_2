@@ -1,0 +1,224 @@
+@use "./../utils/mixin" as *;
+@use "./../base/themes" as *;
+@use "./../utils/color" as *;
+@use "./../components" as *;
+
+body {
+  height: 200vh;
+}
+
+.order {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 80px 0;
+  margin-top: 20px;
+
+  &-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 70px;
+  }
+
+  &-wrapper {
+    display: flex;
+    position: relative;
+    height: 200vh;
+  }
+}
+
+.cash {
+  display: flex;
+  flex-direction: column;
+  width: 284px;
+  height: 489px;
+  right: 50px;
+}
+
+/* 아이템 전체선택 구분선 추가 */
+.item__num {
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: "";
+    width: 1px;
+    height: 13px;
+    margin: 0 14px;
+    display: inline-block;
+    border-right: 1px solid $gray-200;
+  }
+}
+
+/* 주문내역 영역 */
+.basket {
+  margin-right: 20px;
+
+  &__item {
+    width: 742px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid black;
+    padding: 0 5px;
+
+    &:nth-child(n + 2):nth-child(-n + 4) {
+      @include flexbox-between;
+    }
+
+    &:nth-child(n + 2):nth-child(-n + 4) span {
+      display: flex;
+      align-items: center;
+    }
+
+    &:nth-child(2) span::before {
+      content: "";
+      background: url(../img/orderList/Food.png) no-repeat;
+      background-position: -5px -3px;
+      display: inline-block;
+      @include order-icon-size;
+    }
+
+    &:nth-child(3) span::before {
+      content: "";
+      background: url(../img/orderList/Food.png) no-repeat;
+      background-position: -5px -47px;
+      display: inline-block;
+      @include order-icon-size;
+    }
+
+    &:nth-child(4) span::before {
+      content: "";
+      background: url(../img/orderList/Food.png) no-repeat;
+      background-position: -5px -90px;
+      display: inline-block;
+      @include order-icon-size;
+    }
+
+    &:nth-child(n + 2):nth-child(-n + 4) button {
+      background: url(../img/orderList/item_arrow.png) no-repeat;
+      width: 30px;
+      height: 30px;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+
+/* 배송지 주소 영역 */
+
+.adress {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid $gray-300;
+    font-weight: 600;
+  }
+
+  &__title {
+    @include flex($j: flex-start, $a: center);
+    margin-bottom: 12px;
+
+    &:before {
+      content: "";
+      background: url(../img/header/Location.png) no-repeat;
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  &__info {
+    margin-bottom: 12px;
+  }
+
+  &__post {
+    font-size: 12px;
+    color: $primary;
+  }
+
+  &__btn {
+    color: $primary;
+    font-weight: 600;
+    width: 100%;
+    height: 44px;
+    background-color: white;
+    border: 1.5px solid $primary;
+    border-radius: 4px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+}
+
+/* 상품긍액 캐시 영역 */
+
+.cash-amount {
+  &__container {
+    border: 1px solid $gray-300;
+    border-top: none;
+    padding: 20px;
+    background-color: $gray-50;
+    color: #333;
+  }
+
+  &__wrapper {
+    border-bottom: 1px dotted $gray-300;
+    padding-bottom: 24px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+
+    &:nth-child(-n + 2) {
+      margin-bottom: 16px;
+    }
+
+    &__amount {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &__amount span:last-child {
+      margin-left: 10px;
+    }
+  }
+}
+
+// 상품 총금액 결제 영역
+.cash-pay {
+  &__container {
+    padding-top: 24px;
+    @include flexbox-between;
+  }
+
+  &__item__amount span:first-child {
+    font-size: 28.43px;
+    font-weight: 600;
+  }
+}
+
+// 주문버튼 영역
+#order-btn {
+  margin: 16px 0;
+  padding: 12.5px 0;
+  color: $white;
+  background-color: $primary;
+  border: 1px solid $primary;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+// 안내 가이드 영역
+.guide__list {
+  font-size: 12px;
+  font-weight: 600;
+  color: $gray-400;
+}
+
+.guide__item {
+  line-height: 150%;
+}
