@@ -380,12 +380,13 @@ body {
     border: none;
     background-color: white;
     cursor: pointer;
+    margin-top: 10px;
   }
 
   &_text {
     font-size: 12px;
-    margin-bottom: 8px;
-    margin-top: 3px;
+    margin-bottom: 15px;
+    margin-top: 2px;
   }
 }
 
@@ -397,5 +398,5 @@ body {
 
 .recent_slide {
   list-style: none;
-  margin-right: 40px;
+  // margin-right: 40px;
 }

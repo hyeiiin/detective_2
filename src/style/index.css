@@ -1233,11 +1233,12 @@ body {
   border: none;
   background-color: white;
   cursor: pointer;
+  margin-top: 10px;
 }
 .recent_text {
   font-size: 12px;
-  margin-bottom: 8px;
-  margin-top: 3px;
+  margin-bottom: 15px;
+  margin-top: 2px;
 }
 
 @media (max-width: 1200px) {
@@ -1247,7 +1248,6 @@ body {
 }
 .recent_slide {
   list-style: none;
-  margin-right: 40px;
 }
 
 .special {
